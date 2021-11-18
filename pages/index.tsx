@@ -52,12 +52,12 @@ export default function Home() {
           disabled={isMinting}
           type="number"
           min={2}
-          max={10}
+          max={999}
           className="px-2 mx-auto mt-5 font-bold text-white bg-gray-500"
           value={mintCount}
           onChange={(e) => setMintCount((e.target as any).value)}
         />
-        <p className="mx-auto mt-2">min 2; max 10;</p>
+        <p className="mx-auto mt-2">min 2; max 999;</p>
       </>
     );
   };
@@ -65,7 +65,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>next-candy-machine</title>
+        <title>TimeKeepers Public NFT Mint</title>
         <meta
           name="description"
           content="Simplified NextJs with typescript example app integrated with Metaplex's Candy Machine"
@@ -76,7 +76,7 @@ export default function Home() {
       <div className="flex flex-col items-center min-h-screen mx-6">
         <Toaster />
         <div className="flex items-center justify-between w-full mt-3">
-          <h1 className="text-2xl font-bold">next-candy-machine</h1>
+          <h1 className="text-2xl font-bold">TimeKeepers Public NFT Mint</h1>
           <div className="flex items-center">
             {connected && (
               <div className="flex items-end mr-2">
@@ -110,7 +110,7 @@ export default function Home() {
               {new Date(mintStartDate).getTime() < Date.now() ? (
                 <>
                   {isSoldOut ? (
-                    <p>SOLD OUT</p>
+                    <p>SOLD OUT!</p>
                   ) : (
                     <>
                       <div className="flex flex-col w-1/2">
